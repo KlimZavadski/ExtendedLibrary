@@ -67,11 +67,15 @@ namespace ExtendedLibrary
         public static String GetResponseHtml(String url, String host)
         {
             var response = (HttpWebResponse)GetResponse(url, host);
-            var encoding = Encoding.GetEncoding(response.CharacterSet);
-            using (StreamReader streamReader = new StreamReader(response.GetResponseStream(), encoding))
+            if (response != null)
             {
-                return streamReader.ReadToEnd();
+                var encoding = Encoding.GetEncoding(response.CharacterSet);
+                using (var streamReader = new StreamReader(response.GetResponseStream(), encoding))
+                {
+                    return streamReader.ReadToEnd();
+                }
             }
+            return String.Empty;
         }
     }
 }
