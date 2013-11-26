@@ -9,7 +9,7 @@ namespace ExtendedLibrary
     /// <summary>
     /// Provide methods for working with web sites.
     /// </summary>
-    public static class ExtendedHtmlHelpers
+    public static class ExtendedWebHelpers
     {
         /// <summary>
         /// Get response from site.
