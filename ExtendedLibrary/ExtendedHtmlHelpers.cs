@@ -54,10 +54,12 @@ namespace ExtendedLibrary
         public static String GetRedirectUrl(String url, String login, String password)
         {
             var responce = (HttpWebResponse)GetResponse(url, login, password);
+
             if (responce != null)
             {
                 return responce.ResponseUri.ToString();
             }
+
             return String.Empty;
         }
 
@@ -81,14 +83,16 @@ namespace ExtendedLibrary
         public static String GetResponseHtml(String url, String login, String password)
         {
             var response = (HttpWebResponse)GetResponse(url, login, password);
+
             if (response != null)
             {
-                var encoding = Encoding.GetEncoding(response.CharacterSet);
+                var encoding = Encoding.GetEncoding(response.CharacterSet != "" ? response.CharacterSet : "windows-1251");
                 using (var streamReader = new StreamReader(response.GetResponseStream(), encoding))
                 {
                     return streamReader.ReadToEnd();
                 }
             }
+
             return String.Empty;
         }
 
