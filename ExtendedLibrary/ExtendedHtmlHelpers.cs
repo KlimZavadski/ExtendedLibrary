@@ -25,9 +25,9 @@ namespace ExtendedLibrary
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 request.AllowAutoRedirect = false;
                 request.Method = "GET";
-                request.UserAgent = "User-Agent=Mozilla/5.0 (Windows; U; Windows NT 5.1; ru; rv:1.9.1.7) Gecko/20091221 Firefox/3.5.7 (.NET CLR 3.5.30729)";
+                request.UserAgent = "User-Agent=Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.149 Safari/537.36";
                 request.Headers.Add(HttpRequestHeader.AcceptLanguage, @"ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3");
-                request.Headers.Add(HttpRequestHeader.AcceptEncoding, @"gzip, deflate");
+                request.Headers.Add(HttpRequestHeader.AcceptEncoding, @"gzip, deflate, sdch");
                 request.AutomaticDecompression = DecompressionMethods.Deflate | DecompressionMethods.GZip;
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.ProtocolVersion = HttpVersion.Version11;
