@@ -6,6 +6,8 @@ namespace ExtendedLibrary
 {
     public static class ExtendedIOHelpers
     {
+        #region File
+
         /// <summary>
         /// Save text to file.
         /// </summary>
@@ -28,5 +30,40 @@ namespace ExtendedLibrary
         {
             SaveToFile(fileName, Encoding.UTF8, ExtendedJavascriptHelpers.Serialize(obj));
         }
+
+        #endregion
+
+        #region Console
+
+        public delegate bool BoolAction();
+
+        /// <summary>
+        /// Show alert in console with question.
+        /// </summary>
+        /// <param name="message">Question text.</param>
+        /// <param name="action">Action that would be executed if answer will 'y'.</param>
+        public static void ShowAlert(string message, Action action)
+        {
+            Console.Write(message);
+
+            if (Console.ReadLine() == "y")
+            {
+                action();
+            }
+        }
+
+        /// <summary>
+        /// Show alert in console with question.
+        /// </summary>
+        /// <param name="message">Question text.</param>
+        /// <param name="action">Action with return type of bool that would be executed if answer will 'y'.</param>
+        /// <returns></returns>
+        public static bool ShowAlert(string message, BoolAction action)
+        {
+            Console.Write(message);
+            return Console.ReadLine() == "y" && action();
+        }
+
+        #endregion
     }
 }
