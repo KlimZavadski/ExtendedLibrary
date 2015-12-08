@@ -2,7 +2,6 @@
 using System.IO;
 using System.Text;
 
-
 namespace ExtendedLibrary
 {
     public static class ExtendedIOHelpers

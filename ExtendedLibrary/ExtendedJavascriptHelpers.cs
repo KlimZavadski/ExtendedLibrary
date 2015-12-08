@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.Script.Serialization;
 
-
 namespace ExtendedLibrary
 {
     /// <summary>
@@ -28,6 +27,17 @@ namespace ExtendedLibrary
         public static Object Deserialize(String text, Type type)
         {
             return (new JavaScriptSerializer()).Deserialize(text, type);
+        }
+
+        /// <summary>
+        /// Deserialize json string to specific T object.
+        /// </summary>
+        /// <typeparam name="T">Type of deserialize object.</typeparam>
+        /// <param name="text">Json string.</param>
+        /// <returns></returns>
+        public static T Deserialize<T>(String text) where T : Type
+        {
+            return (new JavaScriptSerializer()).Deserialize<T>(text);
         }
     }
 }
