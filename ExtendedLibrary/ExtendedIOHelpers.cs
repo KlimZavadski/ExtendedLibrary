@@ -13,7 +13,7 @@ namespace ExtendedLibrary
         /// </summary>
         /// <param name="fileName">Output file name.</param>
         /// <param name="text">Text for saving.</param>
-        public static void SaveToFile(String fileName, Encoding encoding, String text)
+        public static void SaveToFile(string fileName, Encoding encoding, string text)
         {
             using (StreamWriter writer = new StreamWriter(fileName, false, encoding))
             {
@@ -26,7 +26,7 @@ namespace ExtendedLibrary
         /// </summary>
         /// <param name="fileName">Output file name.</param>
         /// <param name="obj">Object for saving.</param>
-        public static void SaveAsJsonToFile(String fileName, Object obj)
+        public static void SaveAsJsonToFile(string fileName, object obj)
         {
             SaveToFile(fileName, Encoding.UTF8, ExtendedJavascriptHelpers.Serialize(obj));
         }
@@ -61,6 +61,7 @@ namespace ExtendedLibrary
         public static bool ShowAlert(string message, BoolAction action)
         {
             Console.Write(message);
+
             return Console.ReadLine() == "y" && action();
         }
 

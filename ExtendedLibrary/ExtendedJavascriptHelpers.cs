@@ -13,9 +13,9 @@ namespace ExtendedLibrary
         /// </summary>
         /// <param name="obj">Object for serializing.</param>
         /// <returns></returns>
-        public static String Serialize(Object obj)
+        public static string Serialize(object obj)
         {
-            return (new JavaScriptSerializer()).Serialize(obj);
+            return new JavaScriptSerializer().Serialize(obj);
         }
 
         /// <summary>
@@ -24,9 +24,9 @@ namespace ExtendedLibrary
         /// <param name="text">Json string.</param>
         /// <param name="type">Type of deserialize object.</param>
         /// <returns></returns>
-        public static Object Deserialize(String text, Type type)
+        public static object Deserialize(string text, Type type)
         {
-            return (new JavaScriptSerializer()).Deserialize(text, type);
+            return new JavaScriptSerializer().Deserialize(text, type);
         }
 
         /// <summary>
@@ -35,9 +35,9 @@ namespace ExtendedLibrary
         /// <typeparam name="T">Type of deserialize object.</typeparam>
         /// <param name="text">Json string.</param>
         /// <returns></returns>
-        public static T Deserialize<T>(String text) where T : Type
+        public static T Deserialize<T>(string text)
         {
-            return (new JavaScriptSerializer()).Deserialize<T>(text);
+            return new JavaScriptSerializer().Deserialize<T>(text);
         }
     }
 }
