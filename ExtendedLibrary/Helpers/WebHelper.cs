@@ -8,7 +8,7 @@ namespace ExtendedLibrary
     /// <summary>
     /// Provide methods for working with web sites.
     /// </summary>
-    public static class ExtendedWebHelpers
+    public static class WebHelper
     {
         /// <summary>
         /// Get response from site by https protocol (used SSL).

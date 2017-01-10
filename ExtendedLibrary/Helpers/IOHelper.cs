@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ExtendedLibrary
 {
-    public static class ExtendedIOHelpers
+    public static class IOHelper
     {
         #region File
 
@@ -26,9 +26,9 @@ namespace ExtendedLibrary
         /// </summary>
         /// <param name="fileName">Output file name.</param>
         /// <param name="obj">Object for saving.</param>
-        public static void SaveAsJsonToFile(string fileName, object obj)
+        public static void SaveJsonToFile(string fileName, object obj)
         {
-            SaveToFile(fileName, Encoding.UTF8, ExtendedJavascriptHelpers.Serialize(obj));
+            SaveToFile(fileName, Encoding.UTF8, JavascriptHelper.Serialize(obj));
         }
 
         #endregion

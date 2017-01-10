@@ -6,7 +6,7 @@ namespace ExtendedLibrary
     /// <summary>
     /// Provide methods for working with JavaScript features. 
     /// </summary>
-    public static class ExtendedJavascriptHelpers
+    public static class JavascriptHelper
     {
         /// <summary>
         /// Serialize object to json string.
