@@ -28,7 +28,7 @@ namespace ExtendedLibrary
         /// <param name="obj">Object for saving.</param>
         public static void SaveJsonToFile(string fileName, object obj)
         {
-            SaveToFile(fileName, Encoding.UTF8, JavascriptHelper.Serialize(obj));
+            SaveToFile(fileName, Encoding.UTF8, JsonHelper.Serialize(obj));
         }
 
         #endregion
