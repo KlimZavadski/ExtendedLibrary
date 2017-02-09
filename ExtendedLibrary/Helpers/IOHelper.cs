@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text;
 
-namespace ExtendedLibrary
+namespace ExtendedLibrary.Helpers
 {
     public static class IOHelper
     {

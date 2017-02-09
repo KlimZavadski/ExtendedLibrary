@@ -3,7 +3,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 
-namespace ExtendedLibrary
+namespace ExtendedLibrary.Helpers
 {
     /// <summary>
     /// Provide methods for working with web sites.

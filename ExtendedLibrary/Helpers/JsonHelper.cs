@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Web.Script.Serialization;
 
-namespace ExtendedLibrary
+namespace ExtendedLibrary.Helpers
 {
     /// <summary>
     /// Provide methods for working with JavaScript features. 
