@@ -43,7 +43,6 @@
     <Compile Include="WebService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Services\.DS_Store" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
